@@ -11,7 +11,7 @@ COPY . .
 
 RUN go build -o /usr/bin/app cmd/app/main.go
 
-FROM alpine:3.16.2
+FROM alpine:3.16.3
 
 COPY --from=builder /usr/bin/app /usr/bin/app
 
