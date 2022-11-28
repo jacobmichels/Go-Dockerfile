@@ -1,4 +1,5 @@
-FROM golang:1.19-alpine3.16 AS builder
+# Remember to sha pin!
+FROM golang:1.19.3-alpine3.16 AS builder
 
 WORKDIR /app
 
@@ -11,6 +12,7 @@ COPY . .
 
 RUN go build -o /usr/bin/app cmd/app/main.go
 
+# Remember to sha pin!
 FROM alpine:3.17.0
 
 COPY --from=builder /usr/bin/app /usr/bin/app
