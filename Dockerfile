@@ -13,7 +13,7 @@ COPY . .
 RUN go build -o /usr/bin/app cmd/app/main.go
 
 # Remember to sha pin!
-FROM alpine:3.17.1
+FROM alpine:3.17.2
 
 COPY --from=builder /usr/bin/app /usr/bin/app
 
