@@ -1,5 +1,5 @@
 # Remember to sha pin!
-FROM golang:1.20.2-alpine3.17 AS builder
+FROM golang:1.20.5-alpine3.17 AS builder
 
 WORKDIR /app
 
